@@ -78,7 +78,7 @@ tls {$CLOUDFLARE_EMAIL} {
 }
 ```
 
-#### Image tagging
+#### Image tags
 [See available tags here](https://hub.docker.com/r/runbgp/caddy-cloudflare-dns/tags).
 
 
