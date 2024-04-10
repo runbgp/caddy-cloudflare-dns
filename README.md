@@ -66,12 +66,10 @@ docker run -it --name caddy \
 #### Cloudflare API
 You can obtain your [Cloudflare API token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys) via the Cloudflare Portal. To create an API token with minimal scope, the following steps are needed:
 
-1. Log into the cloudflare dashboard, navigate to account settings and create an API token.
-<br>
+1. Log into the Cloudflare dashboard, navigate to account settings and create an API token.
 2. Grant the following permissions:
    * Zone / Zone / Read
    * Zone / DNS / Edit
-<br>
 2. Add the following to your Caddyfile's [tls directive](https://caddyserver.com/docs/caddyfile/directives/tls#tls). 
 
 ```
@@ -81,5 +79,7 @@ tls {$CLOUDFLARE_EMAIL} {
 ```
 
 #### Image tagging
-This image supports tagging! [See available tags here](https://hub.docker.com/r/runbgp/caddy-cloudflare-dns/tags). 
+[See available tags here](https://hub.docker.com/r/runbgp/caddy-cloudflare-dns/tags).
+
+
 To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the Caddy version you'd like to use, e.g. `runbgp/caddy-cloudflare-dns:2.7.6`
