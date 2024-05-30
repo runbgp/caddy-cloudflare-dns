@@ -82,4 +82,4 @@ tls {$CLOUDFLARE_EMAIL} {
 [See available tags here](https://hub.docker.com/r/runbgp/caddy-cloudflare-dns/tags).
 
 
-To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the Caddy version you'd like to use, e.g. `runbgp/caddy-cloudflare-dns:2.7.6`
+To select a specific version of `caddy`, set your [Docker image tag](https://docs.docker.com/engine/reference/run/#imagetag) to the Caddy version you'd like to use, e.g. `runbgp/caddy-cloudflare-dns:2.8.0`
