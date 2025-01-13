@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_USERNAME: runbgp
   DOCKER_CONTAINER_NAME: caddy-cloudflare-dns
   DOCKER_TARGET_PLATFORM: linux/amd64,linux/arm64,linux/arm/v8,linux/arm/v7
 
@@ -53,10 +52,10 @@ jobs:
           platforms: ${{ env.DOCKER_TARGET_PLATFORM }}
           push: true
           tags: |
-            ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ env.tag }}
-            ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
-            ghcr.io/${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ env.tag }}
-            ghcr.io/${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
+            ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ env.tag }}
+            ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
+            ghcr.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:${{ env.tag }}
+            ghcr.io/${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_CONTAINER_NAME }}:latest
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
